@@ -42,6 +42,7 @@ app.post("/api/notes", function (req, res) {
 app.delete("/api/notes/:id", function (req, res) {
     let response = req.params;
     let id = response.id;
+    console.log("params: " , req.params)
     console.log(`Note id: ${id} marked for deletion`);
 
     fs.readFile(__dirname + "/db/db.json", (err, data) => {
